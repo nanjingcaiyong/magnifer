@@ -1,0 +1,32 @@
+{
+  "name": "magnifer",
+  "version": "0.0.1",
+  "description": "js 放大镜",
+  "scripts": {
+    "build:sit": "npx rollup -c build/rollup.config.sit.ts --configPlugin typescript --bundleConfigAsCjs",
+    "build:pre": "npx rollup -c build/rollup.config.pre.ts --configPlugin typescript --bundleConfigAsCjs",
+    "build:prd": "npx rollup -c build/rollup.config.prd.ts --configPlugin typescript --bundleConfigAsCjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.4",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "cross-env": "^7.0.3",
+    "rollup": "^4.1.4",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.23.3",
+    "@types/node": "^20.9.0",
+    "webpack-merge": "^5.10.0"
+  },
+  "dependencies": {}
+}

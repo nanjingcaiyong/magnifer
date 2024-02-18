@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>放大镜演示</title>
+  <script src="../dist/magnifer.min.js"></script>
+  <style>
+    .container {
+      display: inline-block;
+      font-size: 0;
+    }
+  </style>
+</head>
+<body>
+  <div 
+    id="IMG_CONTAINER" 
+    class="container" 
+  >
+    <img 
+      width="250"
+      src="https://cs-oss-release.oss-cn-hangzhou.aliyuncs.com/cmc-admin/20210915/609824e1ef684e6183a819e54c20fb0b13884936978522?x-oss-process=image/quality,q_70/format,avif"
+      onmouseenter="onOpenMagnifier()"
+    >
+  </div>
+
+  <script>
+    const magnifier = new Magnifier.Magnifier({
+      target: document.querySelector('#IMG_CONTAINER'),
+      scale: 3,
+      windowW: 250,
+      windowH: 375,
+      originW: 250,
+      originH: 375,
+      left: 10
+    })
+
+    const onOpenMagnifier = () => {
+      magnifier.show('https://cs-oss-release.oss-cn-hangzhou.aliyuncs.com/cmc-admin/20210915/609824e1ef684e6183a819e54c20fb0b13884936978522?x-oss-process=image/quality,q_70/format,avif')
+    }
+  </script>
+</body>
+</html>
